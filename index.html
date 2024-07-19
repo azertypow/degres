@@ -5,16 +5,32 @@
   <title>degres</title>
 </head>
 <body style="background: black">
+<nav class="dgrs-nav"
+>
+  <div class="dgrs-nav__coll">
+    <img class="dgrs-nav__logo"
+         src="public/logo.png"
+    />
+  </div>
+  <div class="dgrs-nav__coll" style="padding-right: 10px">
+    <img class="dgrs-nav__icon"
+         src="public/icon-shop.svg"
+    />
+  </div>
+</nav>
 <video class="dgrs-video"
-       src="video.mp4"
+       src="public/video.mp4"
        autoplay="autoplay"
        muted="muted"
        loop="loop"
 ></video>
 </body>
 <style lang="css">
+    :root {
+        --dgrs-nav-height: 2rem;
+    }
+
     body {
-        padding: 0;
         margin: 0;
         display: flex;
         align-content: center;
@@ -24,6 +40,8 @@
         left: 0;
         width: 100%;
         height: 100%;
+        box-sizing: border-box;
+        padding: var(--dgrs-nav-height) 0 0;
     }
 
     .dgrs-video {
@@ -32,5 +50,24 @@
         height: 100%;
         object-fit: cover;
     }
+
+    .dgrs-nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--dgrs-nav-height);
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+    }
+
+    .dgrs-nav__logo {
+        display: block;
+        width: auto;
+        height: var(--dgrs-nav-height);
+    }
+    .dgrs-nav__icon {}
 </style>
 </html>

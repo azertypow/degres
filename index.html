@@ -23,6 +23,9 @@
        autoplay="autoplay"
        muted="muted"
        loop="loop"
+       onclick="(() => {
+           this.muted = !this.muted
+       })()"
 ></video>
 </body>
 <style lang="css">
